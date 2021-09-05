@@ -10,8 +10,9 @@ import {
 	mean, 
 	standardDeviation,
 } from './constants';
+import { Rookie } from './types';
 
-export function generate(count = DEFAULT_COUNT) {
+export function generate(count = DEFAULT_COUNT): Rookie[] {
 	const distribution = new NormalDistribution(mean, standardDeviation);
 	
 	const weights = [];
@@ -37,22 +38,20 @@ export function generate(count = DEFAULT_COUNT) {
 		// const grouped = groupBy(generatedProps[prop]);
 		// const propCounts = fromPairs(keys(grouped).map((prop) => [prop, grouped[prop].length]));
 		// console.log(prop + ' distribution', propCounts);
-	})
-	
-	
-	// Build height and weight
-	for (let n = 0; n < DEFAULT_COUNT; n ++) {
+		
 		// There are only 5 props for height and weight, so we combine the 10 weights in pairs
 		generatedProps['height'].push(heightLabels[weightedRandom(map(chunk(weights, 2), sum))]);
 		generatedProps['weight'].push(weightLabels[weightedRandom(map(chunk(weights, 2), sum))]);
-	}
+	})
 	
 	// Build rookies
 	const rookies = [];
 	for (let n = 0; n < DEFAULT_COUNT; n ++) {
-		const newRookie = fromPairs([...numericProps, ...nonNumbericProps].map(propName => {
+		const allProps = [...numericProps, ...nonNumbericProps];
+		const newRookie = fromPairs(allProps.map(propName => {
 			return [propName, generatedProps[propName][n]];
 		}))
+		newRookie.id = n + 1;
 		rookies.push(newRookie);
 	}
 

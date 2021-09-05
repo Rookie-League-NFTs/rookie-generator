@@ -1,6 +1,6 @@
 import { template } from "./template";
 import { writeFileSync } from "fs";
-
+import { Rookie } from './types'
 
 interface params {
     height: string,
@@ -20,22 +20,10 @@ const textAttributes = {
     fill: 'white'
 }
 
-// Just to Test
-const stats = {
-    height: 'TALL',
-    weight: 'HEAVY',
-    stamina: 4,
-    speed: 3,
-    strength: 5,
-    agility: 5,
-    creativity: 5,
-    influence: 4,
-    aggression: 3,
-    teamwork: 9 
-}
 
-export function generateSVG(): SVGElement {
+export function generateSVG(rookie: Rookie): SVGElement {
     //ROOKIE ID
+<<<<<<< HEAD
     template.text('#8569').attr({...idAttributes, x: 290, y: 130});
 
 
@@ -52,5 +40,21 @@ export function generateSVG(): SVGElement {
 
     const output = writeFileSync('./svgs/test.svg', template.svg())
 
+=======
+    template.text(`#${rookie.id}`).attr({...idAttributes, x: 290, y: 132});
+
+    template.text(rookie.height).attr({...textAttributes, x: 280, y: 318});
+    template.text(rookie.weight).attr({...textAttributes, x: 280, y: 366});
+    template.text(rookie.stamina).attr({...textAttributes, x: 280, y: 412});
+    template.text(rookie.speed).attr({...textAttributes, x: 280, y: 456});
+    template.text(rookie.strength).attr({...textAttributes, x: 280, y: 504});
+    template.text(rookie.agility).attr({...textAttributes, x: 280, y: 550});
+    template.text(rookie.creativity).attr({...textAttributes, x: 280, y: 716});
+    template.text(rookie.influence).attr({...textAttributes, x: 280, y: 764});
+    template.text(rookie.aggression).attr({...textAttributes, x: 280, y: 808});
+    template.text(rookie.teamwork).attr({...textAttributes, x: 280, y: 854});
+
+    writeFileSync(`./output/${rookie.id}.svg`, template.svg())
+>>>>>>> 12f346d (Generates svgs)
     return template;
 }
