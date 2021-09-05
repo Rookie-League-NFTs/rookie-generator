@@ -15,33 +15,13 @@ const idAttributes = {
     fill: 'white'
 }
 
-
 const textAttributes = {
     class: 'text',
     fill: 'white'
 }
 
-
 export function generateSVG(rookie: Rookie): SVGElement {
     //ROOKIE ID
-<<<<<<< HEAD
-    template.text('#8569').attr({...idAttributes, x: 290, y: 130});
-
-
-    template.text(stats.height).attr({...textAttributes, x: 280, y: 318});
-    template.text(stats.weight).attr({...textAttributes, x: 280, y: 366});
-    template.text(stats.stamina).attr({...textAttributes, x: 280, y: 412});
-    template.text(stats.speed).attr({...textAttributes, x: 280, y: 456});
-    template.text(stats.strength).attr({...textAttributes, x: 280, y: 504});
-    template.text(stats.agility).attr({...textAttributes, x: 280, y: 550});
-    template.text(stats.creativity).attr({...textAttributes, x: 280, y: 716});
-    template.text(stats.influence).attr({...textAttributes, x: 280, y: 764});
-    template.text(stats.aggression).attr({...textAttributes, x: 280, y: 808});
-    template.text(stats.teamwork).attr({...textAttributes, x: 280, y: 854});
-
-    const output = writeFileSync('./svgs/test.svg', template.svg())
-
-=======
     template.text(`#${rookie.id}`).attr({...idAttributes, x: 290, y: 132});
 
     template.text(upperCase(rookie.height)).attr({...textAttributes, x: 280, y: 318});
@@ -56,6 +36,5 @@ export function generateSVG(rookie: Rookie): SVGElement {
     template.text(rookie.teamwork).attr({...textAttributes, x: 280, y: 854});
 
     writeFileSync(`./output/${rookie.id}.svg`, template.svg())
->>>>>>> 12f346d (Generates svgs)
     return template;
 }
