@@ -1,4 +1,3 @@
-import { template } from "./template";
 import { writeFileSync } from "fs";
 import { Rookie } from './types'
 import { upperCase } from 'lodash'
@@ -20,7 +19,7 @@ const textAttributes = {
     fill: 'white'
 }
 
-export function generateSVG(rookie: Rookie): SVGElement {
+export function generateSVG(rookie: Rookie, template): SVGElement {
     //ROOKIE ID
     template.text(`#${rookie.id}`).attr({...idAttributes, x: 290, y: 132});
 
@@ -33,7 +32,7 @@ export function generateSVG(rookie: Rookie): SVGElement {
     template.text(rookie.creativity).attr({...textAttributes, x: 280, y: 716});
     template.text(rookie.influence).attr({...textAttributes, x: 280, y: 764});
     template.text(rookie.aggression).attr({...textAttributes, x: 280, y: 808});
-    template.text(rookie.teamwork).attr({...textAttributes, x: 280, y: 854});
+    template.text(rookie.focus).attr({...textAttributes, x: 280, y: 854});
 
     writeFileSync(`./output/svg/${rookie.id}.svg`, template.svg())
     return template;

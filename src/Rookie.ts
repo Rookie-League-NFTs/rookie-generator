@@ -20,7 +20,7 @@ export class Rookie implements IRookie {
 	creativity: number;
 	influence: number;
 	aggression: number;
-	teamwork: number;
+	focus: number;
 
 	constructor(id: number, distribution: NormalDistribution) {
 		this.id = id;
@@ -48,7 +48,6 @@ export class Rookie implements IRookie {
 
 	allAttributes() {
 		return [
-			'id',
 			'height',
 			'weight',
 			'stamina',
@@ -58,7 +57,7 @@ export class Rookie implements IRookie {
 			'creativity',
 			'influence',
 			'aggression',
-			'teamwork',
+			'focus',
 		];
 	}
 

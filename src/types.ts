@@ -9,7 +9,7 @@ export interface Rookie {
 	creativity: number;
 	influence: number;
 	aggression: number;
-	teamwork: number;
+	focus: number;
 
   buildMetadata: () => ({
     image: string;

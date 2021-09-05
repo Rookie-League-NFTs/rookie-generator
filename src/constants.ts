@@ -7,7 +7,7 @@ export const numericProps = [
 	'creativity', 
 	'influence', 
 	'aggression', 
-	'teamwork',
+	'focus',
 ];
 export const nonNumbericProps = ['height', 'weight']
 export const heightLabels = ['Tiny', 'Small', 'Average', 'Tall', 'Giant']
