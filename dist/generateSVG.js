@@ -17,7 +17,7 @@ var fs_1 = require("fs");
 var idAttributes = {
     'font-weight': 'bold',
     'font-family': 'Arial, sans-serif',
-    'font-size': '72px',
+    'font-size': '64px',
     fill: 'white'
 };
 var textAttributes = {
@@ -39,7 +39,7 @@ var stats = {
 };
 function generateSVG() {
     //ROOKIE ID
-    template_1.template.text('#69').attr(__assign(__assign({}, idAttributes), { x: 290, y: 132 }));
+    template_1.template.text('#8569').attr(__assign(__assign({}, idAttributes), { x: 290, y: 128 }));
     template_1.template.text(stats.height).attr(__assign(__assign({}, textAttributes), { x: 280, y: 318 }));
     template_1.template.text(stats.weight).attr(__assign(__assign({}, textAttributes), { x: 280, y: 366 }));
     template_1.template.text(stats.stamina).attr(__assign(__assign({}, textAttributes), { x: 280, y: 412 }));
@@ -50,7 +50,7 @@ function generateSVG() {
     template_1.template.text(stats.influence).attr(__assign(__assign({}, textAttributes), { x: 280, y: 764 }));
     template_1.template.text(stats.aggression).attr(__assign(__assign({}, textAttributes), { x: 280, y: 808 }));
     template_1.template.text(stats.teamwork).attr(__assign(__assign({}, textAttributes), { x: 280, y: 854 }));
-    var output = (0, fs_1.writeFileSync)('./output/test.svg', template_1.template.svg());
+    var output = (0, fs_1.writeFileSync)('./svgs/test.svg', template_1.template.svg());
     return template_1.template;
 }
 exports.generateSVG = generateSVG;

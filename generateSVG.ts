@@ -10,7 +10,7 @@ interface params {
 const idAttributes = {
     'font-weight': 'bold',
     'font-family': 'Arial, sans-serif',
-    'font-size': '72px',
+    'font-size': '64px',
     fill: 'white'
 }
 
@@ -36,7 +36,7 @@ const stats = {
 
 export function generateSVG(): SVGElement {
     //ROOKIE ID
-    template.text('#69').attr({...idAttributes, x: 290, y: 132});
+    template.text('#8569').attr({...idAttributes, x: 290, y: 130});
 
 
     template.text(stats.height).attr({...textAttributes, x: 280, y: 318});
@@ -50,7 +50,7 @@ export function generateSVG(): SVGElement {
     template.text(stats.aggression).attr({...textAttributes, x: 280, y: 808});
     template.text(stats.teamwork).attr({...textAttributes, x: 280, y: 854});
 
-    const output = writeFileSync('./output/test.svg', template.svg())
+    const output = writeFileSync('./svgs/test.svg', template.svg())
 
     return template;
 }
