@@ -1,4 +1,4 @@
-output/svg/*
-output/json/*
+output/svg/*.svg
+output/json/*.json
 dist/*
 node_modules
