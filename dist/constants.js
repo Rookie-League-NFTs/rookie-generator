@@ -13,7 +13,7 @@ exports.numericProps = [
 ];
 exports.nonNumbericProps = ['height', 'weight'];
 exports.heightLabels = ['Tiny', 'Small', 'Average', 'Tall', 'Giant'];
-exports.weightLabels = ['Feather', 'Light', 'Average', 'Heavy', 'Very Heavy'];
+exports.weightLabels = ['Feather', 'Light', 'Average', 'Heavy', 'Whale'];
 exports.DEFAULT_COUNT = 1e1;
 exports.mean = 5;
 exports.standardDeviation = 1.5; // 99% of values are between 0.5 and 9.5
