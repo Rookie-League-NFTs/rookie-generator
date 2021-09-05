@@ -2,12 +2,12 @@ import { templateObject } from "./templateObject";
 const { createSVGWindow } = require('svgdom')
 const { SVG, registerWindow } = require('@svgdotjs/svg.js')
 
-const window = createSVGWindow()
-const document = window.document
-// register window and document
-registerWindow(window, document)
-
 export const buildTemplate = () => {
+  const window = createSVGWindow()
+  const document = window.document
+  // register window and document
+  registerWindow(window, document)
+  
   const template = SVG(document.documentElement).size(1000,1000);
 
   const FILL_COLOR = 'white';

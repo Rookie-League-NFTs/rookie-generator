@@ -22,8 +22,7 @@ const textAttributes = {
 
 export function generateSVG(rookie: Rookie) {
     const template = buildTemplate();
-    
-    console.log('generateSVG', rookie.id)
+
     //ROOKIE ID
     template.text(`#${rookie.id}`).attr({...idAttributes, x: 290, y: 132});
 
