@@ -1,3 +1,4 @@
-output/*
+output/svg/*
+output/json/*
 dist/*
 node_modules
