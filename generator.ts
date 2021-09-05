@@ -39,7 +39,7 @@ const numericProps = [
 ];
 const nonNumbericProps = ['height', 'weight']
 const heightLabels = ['Tiny', 'Small', 'Average', 'Tall', 'Giant']
-const weightLabels = ['Feather', 'Light', 'Average', 'Heavy', 'Very Heavy']
+const weightLabels = ['Feather', 'Light', 'Average', 'Heavy', 'Whale']
 
 
 const NFTcount = 1e1;
