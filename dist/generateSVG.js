@@ -14,6 +14,7 @@ exports.__esModule = true;
 exports.generateSVG = void 0;
 var template_1 = require("./template");
 var fs_1 = require("fs");
+var lodash_1 = require("lodash");
 var idAttributes = {
     'font-weight': 'bold',
     'font-family': 'Arial, sans-serif',
@@ -41,8 +42,8 @@ function generateSVG(rookie) {
     var output = (0, fs_1.writeFileSync)('./svgs/test.svg', template_1.template.svg());
 =======
     template_1.template.text("#" + rookie.id).attr(__assign(__assign({}, idAttributes), { x: 290, y: 132 }));
-    template_1.template.text(rookie.height).attr(__assign(__assign({}, textAttributes), { x: 280, y: 318 }));
-    template_1.template.text(rookie.weight).attr(__assign(__assign({}, textAttributes), { x: 280, y: 366 }));
+    template_1.template.text((0, lodash_1.upperCase)(rookie.height)).attr(__assign(__assign({}, textAttributes), { x: 280, y: 318 }));
+    template_1.template.text((0, lodash_1.upperCase)(rookie.weight)).attr(__assign(__assign({}, textAttributes), { x: 280, y: 366 }));
     template_1.template.text(rookie.stamina).attr(__assign(__assign({}, textAttributes), { x: 280, y: 412 }));
     template_1.template.text(rookie.speed).attr(__assign(__assign({}, textAttributes), { x: 280, y: 456 }));
     template_1.template.text(rookie.strength).attr(__assign(__assign({}, textAttributes), { x: 280, y: 504 }));

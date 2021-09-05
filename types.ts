@@ -1,4 +1,4 @@
-export type Rookie = {
+export interface Rookie {
   id: number;
 	height: string; // TODO: enum
 	weight: string; // TODO: enum
@@ -10,4 +10,9 @@ export type Rookie = {
 	influence: number;
 	aggression: number;
 	teamwork: number;
+
+  buildMetadata: () => ({
+    image: string;
+    attributes: Record<string, string | number>[];
+  });
 }

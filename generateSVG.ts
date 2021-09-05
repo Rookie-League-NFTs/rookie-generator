@@ -1,6 +1,7 @@
 import { template } from "./template";
 import { writeFileSync } from "fs";
 import { Rookie } from './types'
+import { upperCase } from 'lodash'
 
 interface params {
     height: string,
@@ -43,8 +44,8 @@ export function generateSVG(rookie: Rookie): SVGElement {
 =======
     template.text(`#${rookie.id}`).attr({...idAttributes, x: 290, y: 132});
 
-    template.text(rookie.height).attr({...textAttributes, x: 280, y: 318});
-    template.text(rookie.weight).attr({...textAttributes, x: 280, y: 366});
+    template.text(upperCase(rookie.height)).attr({...textAttributes, x: 280, y: 318});
+    template.text(upperCase(rookie.weight)).attr({...textAttributes, x: 280, y: 366});
     template.text(rookie.stamina).attr({...textAttributes, x: 280, y: 412});
     template.text(rookie.speed).attr({...textAttributes, x: 280, y: 456});
     template.text(rookie.strength).attr({...textAttributes, x: 280, y: 504});
