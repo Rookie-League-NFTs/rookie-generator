@@ -35,6 +35,6 @@ export function generateSVG(rookie: Rookie): SVGElement {
     template.text(rookie.aggression).attr({...textAttributes, x: 280, y: 808});
     template.text(rookie.teamwork).attr({...textAttributes, x: 280, y: 854});
 
-    writeFileSync(`./output/${rookie.id}.svg`, template.svg())
+    writeFileSync(`./output/svg/${rookie.id}.svg`, template.svg())
     return template;
 }
