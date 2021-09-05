@@ -3,6 +3,8 @@
     .text { font-size: 40px; font-weight: bold; font-family: Arial }
   </style>
 <rect width="1000" height="1000" fill="#1F1C1C"/>
+<text class="text" font-size="65px" x="250" y="118" fill="aqua">#69</text>
+
 <text class="text" x="201" y="318" fill="aqua">{HEIGHT}</text>
 <text class="text" x="201" y="366" fill="aqua">{WEIGHT}</text>
 <text class="text" x="225" y="412" fill="aqua">{STAMINA}</text>

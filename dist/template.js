@@ -11,6 +11,7 @@ registerWindow(window, document);
 exports.template = SVG(document.documentElement).size(1000, 1000);
 var FILL_COLOR = 'white';
 var BACKGROUND_FILL_COLOR = '#1F1C1C';
+exports.template.style('.text { font-size: 40px; font-weight: bold; font-family: Arial }');
 // Background
 var background = exports.template.rect({ width: 1000, height: 1000 });
 background.fill(BACKGROUND_FILL_COLOR);

@@ -12,6 +12,8 @@ export const template = SVG(document.documentElement).size(1000,1000);
 const FILL_COLOR = 'white';
 const BACKGROUND_FILL_COLOR = '#1F1C1C'
 
+template.style('.text { font-size: 40px; font-weight: bold; font-family: Arial }')
+
 // Background
 const background = template.rect({width: 1000, height: 1000});
 background.fill(BACKGROUND_FILL_COLOR);
