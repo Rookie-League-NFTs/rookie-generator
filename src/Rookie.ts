@@ -22,13 +22,13 @@ export class Rookie implements IRookie {
 	aggression: number;
 	focus: number;
 
-	constructor(id: number, distribution: NormalDistribution) {
+	constructor(id: number, distribution: NormalDistribution, ratio: number = 1) {
 		this.id = id;
 
 		const weights = [];
 		let i = 0
 		for (i; i < 10; i++) {
-			weights.push(distribution.probabilityBetween(i, i+1));
+			weights.push(distribution.probabilityBetween(i, i+1) * ratio);
 		}
 
 		this.buildNumbericProps(weights);
