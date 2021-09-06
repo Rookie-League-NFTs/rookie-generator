@@ -8,7 +8,7 @@ import { Rookie as IRookie } from './types';
 import { Rookie } from './Rookie';
 import { writeFileSync } from 'fs';
 
-export function generateRookies(count = DEFAULT_COUNT): IRookie[] {
+export function generateRookies(): IRookie[] {
 	const distribution = new NormalDistribution(mean, standardDeviation);
 	
 	// Generate rookie instances

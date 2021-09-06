@@ -2,7 +2,9 @@ import { generateSVG } from './generateSVG';
 import { generateRookies } from './generateRookie';
 import { writeFileSync } from 'fs';
 
-const rookies = generateRookies(10);
+const rookies = generateRookies();
+
+console.log(rookies)
 
 // DEBUG: 
 // console.log(rookies);

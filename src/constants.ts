@@ -13,7 +13,7 @@ export const nonNumbericProps = ['height', 'weight']
 export const heightLabels = ['Tiny', 'Small', 'Average', 'Tall', 'Giant']
 export const weightLabels = ['Feather', 'Light', 'Average', 'Heavy', 'Whale']
 
-export const DEFAULT_COUNT = 1e1;
+export const DEFAULT_COUNT = 50;
 export const mean = 5;
 export const standardDeviation = 2; // 99% of values are between 0.5 and 9.5
 
