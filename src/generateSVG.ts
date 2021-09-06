@@ -17,7 +17,7 @@ const idAttributes = {
 
 const textAttributes = {
     class: 'text',
-    fill: 'white'
+    fill: 'aqua'
 }
 
 export function generateSVG(rookie: Rookie) {
