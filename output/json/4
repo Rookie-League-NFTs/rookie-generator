@@ -1,0 +1,45 @@
+{
+  "image": "ipfs://QmSKpeM9hsfrq2GCJA3xQiDcQFm3Xp9GQbj33RiCUWDHzC/4",
+  "attributes": [
+    {
+      "trait_type": "Height",
+      "value": "Tall"
+    },
+    {
+      "trait_type": "Weight",
+      "value": "Light"
+    },
+    {
+      "trait_type": "Stamina",
+      "value": 5
+    },
+    {
+      "trait_type": "Speed",
+      "value": 5
+    },
+    {
+      "trait_type": "Strength",
+      "value": 7
+    },
+    {
+      "trait_type": "Agility",
+      "value": 5
+    },
+    {
+      "trait_type": "Creativity",
+      "value": 7
+    },
+    {
+      "trait_type": "Influence",
+      "value": 2
+    },
+    {
+      "trait_type": "Aggression",
+      "value": 2
+    },
+    {
+      "trait_type": "Focus",
+      "value": 6
+    }
+  ]
+}

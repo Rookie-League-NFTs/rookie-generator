@@ -21,7 +21,7 @@ export function generateRookies(): IRookie[] {
 
 	// Write metadata to file
 	rookies.forEach(rookie => {
-		writeFileSync(`./output/json/${rookie.id}.json`, JSON.stringify(rookie.buildMetadata(), null, 2));
+		writeFileSync(`./output/json/${rookie.id}`, JSON.stringify(rookie.buildMetadata(), null, 2));
 	});
 	
 	return rookies;

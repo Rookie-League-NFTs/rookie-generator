@@ -1,15 +1,10 @@
-import { generateSVG } from './generateSVG';
+import { generateSVG } from './generateRookieSVG';
 import { generateRookies } from './generateRookie';
 
+//Generate Rookies
 const rookies = generateRookies();
-
-console.log(rookies)
-
-// DEBUG: 
-// console.log(rookies);
 
 // Build unique svg's
 rookies.forEach((rookie, index) => {
-  console.log('generating svg #', index + 1);
   generateSVG(rookie);
 })
